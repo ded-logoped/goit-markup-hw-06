@@ -787,41 +787,46 @@ section {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/*mobile footer*/
+
 .footer {
   font-family: "Relaway", sans-serif;
   background: #2e2f42;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
-.footer-container {
-  display: flex;
-  align-items: center;
-  margin-right: 120px;
+@media only screen and (min-width: 768px) and (max-width: 1157.98px) {
+  .footer .footer-container {
+    padding: 0 108px;
+  }
 }
 
-.footer-first {
-  margin-right: 120px;
+@media only screen and (min-width: 768px) {
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 72px 24px;
+  }
 }
 
-.social-footer {
-  display: flex;
-
-  gap: 16px;
+@media only screen and (max-width: 767.98px) {
+  .footer {
+    text-align: center;
+  }
 }
 
-.sfm {
-  display: block;
-  color: #ffffff;
-  font-family: Roboto;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.5; /* 150% */
-  letter-spacing: 0.02em;
-
-  margin-bottom: 16px;
+@media screen and (max-width: 767.98px) {
+  .footer-first {
+    margin-bottom: 72px;
+  }
 }
 
+@media only screen and (min-width: 768px) {
+  .footer-first {
+    max-width: 264px;
+  }
+}
 .logo-link-footer {
   display: block;
   font-family: "Raleway", sans-serif;
@@ -844,7 +849,31 @@ section {
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0.32px;
-  max-width: 264px;
+  width: 100%;
+  text-align: left;
+}
+
+@media screen and (max-width: 767.98px) {
+  .footer-second {
+    margin-bottom: 72px;
+  }
+}
+.sfm {
+  display: block;
+  color: #ffffff;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5; /* 150% */
+  letter-spacing: 0.02em;
+
+  margin-bottom: 16px;
+}
+.social-footer {
+  display: flex;
+
+  gap: 16px;
+  justify-content: center;
 }
 
 .social-link-footer {
@@ -859,14 +888,237 @@ section {
   transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
-.social-link-footer:hover {
-  background-color: #31d0aa;
+@media only screen and (min-width: 768px) {
+  .footer-third {
+    max-width: 453px;
+    width: 100%;
+  }
 }
-.social-link-footer:focus {
-  background-color: #31d0aa;
+
+.third-caption {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  margin-bottom: 16px;
 }
+.subscribe-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+  justify-content: center;
+}
+
+.subscribe-form-field {
+  width: 100%;
+}
+@media only screen and (min-width: 768px) {
+  .subscribe-form-field {
+    max-width: 264px;
+  }
+}
+
+.subscribe-input {
+  border-radius: 4px;
+  border: 1px solid #fff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  height: 40px;
+  flex-shrink: 0;
+  outline: transparent;
+  background-color: transparent;
+  padding: 8px 16px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+}
+.subscribe-btn {
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+  gap: 16px;
+  padding: 8px 24px;
+  border-radius: 4px;
+  border: none;
+  background: #4d5ae5;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  min-width: 165px;
+  height: 40px;
+}
+.subscribe-svg {
+  fill: #fff;
+  margin-left: 16px;
+}
+
+/*desktop footer*/
+@media screen and (min-width: 1158px) {
+  .footer {
+    font-family: "Relaway", sans-serif;
+    background: #2e2f42;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .footer-container {
+    display: flex;
+    align-items: center;
+    margin-right: 120px;
+  }
+
+  .footer-first {
+    margin-right: 120px;
+  }
+
+  .social-footer {
+    display: flex;
+
+    gap: 16px;
+  }
+
+  .sfm {
+    display: block;
+    color: #ffffff;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5; /* 150% */
+    letter-spacing: 0.02em;
+
+    margin-bottom: 16px;
+  }
+
+  .logo-link-footer {
+    display: block;
+    font-family: "Raleway", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    color: #4d5ae5;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    display: inline-block;
+  }
+  .logo-link-tile-footer {
+    color: #f4f4fd;
+  }
+  .footer-paragraph {
+    color: #f4f4fd;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.32px;
+    max-width: 264px;
+  }
+
+  .social-link-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    color: #f4f4fd;
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .social-link-footer:hover {
+    background-color: #31d0aa;
+  }
+  .social-link-footer:focus {
+    background-color: #31d0aa;
+  }
+
+  .footer-third {
+    margin-left: auto;
+    align-items: center;
+  }
+  .third-caption {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    margin-bottom: 16px;
+  }
+  .subscribe-form {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .subscribe-input {
+    border-radius: 4px;
+    border: 1px solid #fff;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    height: 40px;
+    flex-shrink: 0;
+    outline: transparent;
+    background-color: transparent;
+    padding: 8px 16px;
+    color: #fff;
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
+  }
+  .subscribe-btn {
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto", sans-serif;
+    cursor: pointer;
+    gap: 16px;
+    padding: 8px 24px;
+    border-radius: 4px;
+    border: none;
+    background: #4d5ae5;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    min-width: 165px;
+    height: 40px;
+  }
+
+  .subscribe-btn:hover,
+  .subscribe-btn:focus {
+    background-color: #404bbf;
+  }
+  .subscribe-svg {
+    fill: #fff;
+    margin-left: 16px;
+  }
+}
+
+/*modal*/
 
 .backdrop {
   opacity: 0;
@@ -1114,70 +1366,6 @@ section {
   background-color: #404bbf;
 }
 
-.footer-third {
-  margin-left: auto;
-  align-items: center;
-}
-.third-caption {
-  color: #fff;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  margin-bottom: 16px;
-}
-.subscribe-form {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-}
-.subscribe-form-field {
-}
-.subscribe-input {
-  border-radius: 4px;
-  border: 1px solid #fff;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-  width: 264px;
-  height: 40px;
-  flex-shrink: 0;
-  outline: transparent;
-  background-color: transparent;
-  padding: 8px 16px;
-  color: #fff;
-  font-size: 12px;
-  line-height: 2;
-  letter-spacing: 0.04em;
-}
-.subscribe-btn {
-  color: #fff;
-  text-align: center;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: "Roboto", sans-serif;
-  cursor: pointer;
-  gap: 16px;
-  padding: 8px 24px;
-  border-radius: 4px;
-  border: none;
-  background: #4d5ae5;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  min-width: 165px;
-  height: 40px;
-}
-
-.subscribe-btn:hover,
-.subscribe-btn:focus {
-  background-color: #404bbf;
-}
-.subscribe-svg {
-  fill: #fff;
-  margin-left: 16px;
-}
 .subscribe-input::placeholder {
   color: #fff;
 }
