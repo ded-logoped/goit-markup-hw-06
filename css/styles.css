@@ -911,7 +911,7 @@ section {
 }
 .subscribe-form {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 16px 24px;
   justify-content: center;
 }
@@ -948,6 +948,7 @@ section {
   line-height: 1.5;
   letter-spacing: 0.04em;
   display: flex;
+  flex-shrink: 0;
   align-items: center;
   justify-content: center;
   font-family: "Roboto", sans-serif;
